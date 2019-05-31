@@ -1,6 +1,6 @@
 package in.ac.sharda;
 
-public class Student {
+public class Student implements IResultArrivedListener {
 	
 	private final int rollNumber;
 	
@@ -42,6 +42,12 @@ public class Student {
 					.getRollNumber() == rollNumber;
 		}
 		return false;
+	}
+
+	@Override
+	public void resultArrived() {
+		System.out.println("Hey!! Result has arrived, just go and check them.");
+		
 	}
 	
 

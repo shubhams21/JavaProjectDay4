@@ -15,5 +15,10 @@ public class University {
 		departments.parallelStream().forEach(s -> System.out.println(s.getId()));
 	}
 	
+	public void resultDeclared() {
+		//this will made all CPU cores
+		departments.parallelStream().forEach(d -> d.resultArrived());
+	}
+	
 
 }
